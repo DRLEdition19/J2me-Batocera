@@ -1,4 +1,3 @@
-```markdown
 # 🎮 Emulador de Jogos Java ME para Batocera
 
 Olá! 👋
