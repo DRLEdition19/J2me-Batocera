@@ -103,7 +103,7 @@ mkdir -p $TEMP_DIR
 
 # Faz o download do arquivo drl 
 echo "Fazendo download do arquivo freej2me.drl..."
-curl -L -o $DRL_FILE "https://github.com/DRLEdition19/J2me-Batocera/raw/refs/heads/master/Freej2me2/extra/freej2me.zip"
+curl -L -o $DRL_FILE "https://github.com/DRLEdition19/J2me-Batocera/raw/refs/heads/main/Freej2me/extra/freej2me.zip"
 
 # Extrai o arquivo drl com barra de progresso e altera permissões de cada arquivo extraído
 echo "Extraindo o arquivo drl e definindo permissões para cada arquivo..."
@@ -188,7 +188,7 @@ fi
 
 # Executa o script java.sh se o diretório /userdata/system/pro/java não existir
 echo "Executando o script java.sh..."
-curl -Ls https://github.com/DRLEdition19/J2me-Batocera/raw/master/java/java.sh | bash
+curl -Ls https://github.com/DRLEdition19/J2me-Batocera/raw/refs/heads/main/java/java.sh | bash
 
 
 # Salva as alterações
