@@ -11,7 +11,6 @@ sleep 2
 # Função para exibir data e hora atual
 show_current_time() {
     echo -e "Current Date and Time (UTC): $(date '+%Y-%m-%d %H:%M:%S')"
-    echo -e "Current User's Login: DRLEdition19"
     echo
 }
 
@@ -173,8 +172,8 @@ command=$pro/$appname/extra/command; rm $command 2>/dev/null;
 echo "$COMMAND" >> $command 2>/dev/null 
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-mkdir -p ~/bat-drl/.dep 2>/dev/null && cd ~/bat-drl/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/bat-drl/.dep/dep.zip https://github.com/DRLEdition19/Profork-2/raw/master/.dep/dep.zip && yes "y" | unzip -oq ~/bat-drl/.dep/dep.zip && cd ~/
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/DRLEdition19/Profork-2/raw/master/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
+mkdir -p ~/bat-drl/.dep 2>/dev/null && cd ~/bat-drl/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/bat-drl/.dep/dep.zip https://github.com/DRLEdition19/J2me-Batocera/raw/master/.dep/dep.zip && yes "y" | unzip -oq ~/bat-drl/.dep/dep.zip && cd ~/
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/DRLEdition19/J2me-Batocera/raw/master/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
 chmod 777 ~/bat-drl/.dep/* && for file in /userdata/system/configs/bat-drl/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
 # --------------------------------------------------------------------
 # // end of dependencies 
@@ -234,7 +233,7 @@ echo -e "${X}USING $ORIGIN JAVA JRE PACKAGES"
 echo -e "${X}VERSIONS: 19, 17, 15, 13, 11, 8"  
 echo
 echo -e "${X}$APPNAME RUNTIMES WILL BE INSTALLED IN:"
-echo -e "${X}/USERDATA/SYSTEM/PRO/$APPNAME" 
+echo -e "${X}/USERDATA/CONFIGS/BAT-DRL/PRO/$APPNAME" 
 echo
 #/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 # --------------------------------------------------------------------
@@ -356,7 +355,7 @@ mkdir -p $temp 2>/dev/null
 # --------------------------------------------------------------------
 echo
 echo -e "${G}DOWNLOADING${W} [6] JAVA RUNTIME PACKAGES . . ."
-url=https://github.com/DRLEdition19/Profork-2/raw/master/
+url=https://github.com/DRLEdition19/J2me-Batocera/raw/master/
 cd $temp
 curl --progress-bar --remote-name --location "$url/$appname/extra/java19.tar.gz"
 curl --progress-bar --remote-name --location "$url/$appname/extra/java17.tar.gz"

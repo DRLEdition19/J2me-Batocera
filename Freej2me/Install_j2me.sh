@@ -11,7 +11,6 @@ sleep 2
 # Função para exibir data e hora atual
 show_current_time() {
     echo -e "Current Date and Time (UTC): $(date '+%Y-%m-%d %H:%M:%S')"
-    echo -e "Current User's Login: DRLEdition19"
     echo
 }
 
