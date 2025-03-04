@@ -36,4 +36,3 @@ Lembrando que a emulação padrão do Freej2me já conta com um recurso de recon
 ---
 
 Aproveite o emulador e divirta-se com seus jogos Java ME favoritos no Batocera! 😃
-```
