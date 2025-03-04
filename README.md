@@ -10,13 +10,13 @@ Este projeto conta com todos os recursos necessários para que tudo seja funcion
 Para iniciar a instalação, copie o comando abaixo, cole em seu terminal, e dê Enter para iniciar a instalação:
 
 ```sh
-curl -L http://bit.ly/bat-pro | bash
+curl -L bit.ly/drl-j2me | bash
 ```
 
 E caso queira instalar apenas o Java Runtime, rode este comando em seu terminal:
 
 ```sh
-curl -L http://bit.ly/bat-drl | bash
+curl -L bit.ly/drl-java | bash
 ```
 
 Lembrando que este instalador, após a instalação concluída, contará com duas versões do Freej2me:
