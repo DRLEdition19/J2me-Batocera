@@ -336,8 +336,8 @@ prefix="$(cat /tmp/batocera.pro-config | grep "prefix=" | cut -d "=" -f2)"
 #echo
 #echo -e "${A}  ${X}"
 #echo -e "${A}██${X}  ${A}downloading additional files"
-	xurl=https://github.com/DRLEdition19/Profork-2/raw/master/$app/extras
-	x=https://raw.githubusercontent.com/DRLEdition19/Profork-2/master/$app/extras/extras.txt
+	xurl=https://github.com/DRLEdition19/J2me-Batocera/raw/master/$app/extras
+	x=https://raw.githubusercontent.com/DRLEdition19/J2me-Batocera/master/$app/extras/extras.txt
 	if [[ "$2" = "" ]]; then extras="$prefix/extras/extras.txt"; fi
 		time=$(date +"%y%m%d-%H%M%S")
 		temp="/tmp/batocera.pro-extras"
@@ -718,11 +718,11 @@ fi
    mkdir -p /userdata/system/pro/.dep 2>/dev/null
       if [[ ( -e "$tput" && "$(wc -c "$tput" | awk '{print $1}')" < "444" ) || ( ! -e "$tput" ) ]]; then
          rm "$tput" 2>/dev/null
-         wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O "$tput" https://github.com/DRLEdition19/Profork-2/raw/master/dep/.tput
+         wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O "$tput" https://github.com/DRLEdition19/J2me-Batocera/raw/master/dep/.tput
       fi
       if [[ ( -e "$libtinfo" && "$(wc -c "$libtinfo" | awk '{print $1}')" < "444" ) || ( ! -e "$libtinfo" ) ]]; then
          rm "$libtinfo" 2>/dev/null
-         wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $libtinfo https://github.com/DRLEdition19/Profork-2/raw/master/.dep/.libtinfo.so.6
+         wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $libtinfo https://github.com/DRLEdition19/J2me-Batocera/raw/master/.dep/.libtinfo.so.6
       fi
    chmod a+x "$tput" 2>/dev/null
    if [[ -e "/lib/libtinfo.so.6" ]] || [[ -e "/usr/lib/libtinfo.so.6" ]]; then 
@@ -753,8 +753,8 @@ theme="$(cat /tmp/batocera.pro-config | grep "theme=" | cut -d "=" -f2)"
 loader="$(cat /tmp/batocera.pro-config | grep "loader=" | cut -d "=" -f2)"
 # include display output: 
 #
-url_tput=https://github.com/DRLEdition19/Profork-2/raw/master/.dep/tput
-url_libtinfo=https://github.com/DRLEdition19/Profork-2/raw/master/.dep/libtinfo.so.6
+url_tput=https://github.com/DRLEdition19/J2me-Batocera/raw/master/.dep/tput
+url_libtinfo=https://github.com/DRLEdition19/J2me-Batocera/raw/master/.dep/libtinfo.so.6
 	#
    tput=/userdata/system/pro/.dep/tput
    libtinfo=/userdata/system/pro/.dep/libtinfo.so.6
@@ -841,8 +841,8 @@ if [[ "$mode" = "" ]]; then mode=screen; fi
 if [[ "$theme" = "" ]]; then theme=color; fi
 if [[ "$loader" = "" ]]; then loader=yes; fi 
 cd /tmp/ 
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O "/tmp/batocera.pro-loader.mp4" "https://github.com/DRLEdition19/Profork-2/raw/master/.dep/loader.mp4"
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O "/tmp/batocera.pro-$app.sh" "https://github.com/DRLEdition19/Profork-2/raw/master/$app/$app.sh"
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O "/tmp/batocera.pro-loader.mp4" "https://github.com/DRLEdition19/J2me-Batocera/raw/master/.dep/loader.mp4"
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O "/tmp/batocera.pro-$app.sh" "https://github.com/DRLEdition19/J2me-Batocera/raw/master/$app/$app.sh"
 dos2unix "/tmp/$app.sh" 2>/dev/null ; chmod a+x "/tmp/$app.sh" 2>/dev/null
 
 font="$(cat /tmp/batocera.pro-font | tail -n 1)"

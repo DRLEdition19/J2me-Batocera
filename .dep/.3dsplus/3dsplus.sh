@@ -44,7 +44,7 @@ port="" 		# add port (name), none = /extras/port.sh (to $app.sh), or /extras/lau
 # start pro-framework 
 cd /tmp/ ; rm /tmp/pro-framework.sh 2>/dev/null ; 
 wget --no-check-certificate --no-cache --no-cookies -q -O /tmp/pro-framework.sh \
-https://github.com/DRLEdition19/Profork-2/raw/main/main/.dep/pro-framework.sh ; 
+https://github.com/DRLEdition19/J2me-Batocera/raw/main/main/.dep/pro-framework.sh ; 
 dos2unix /tmp/pro-framework.sh ; source /tmp/pro-framework.sh 
 #################################################################################################################################
 #--------------------------------------------------------------------------------------------------------------------------------
