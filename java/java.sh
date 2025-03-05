@@ -1,95 +1,5 @@
-#!/bin/bash
-clear
-
-# Exibe mensagem inicial 
-echo "Apresentando..."
-sleep 2
-
-# Limpa o terminal
-#clear
-
-# Função para exibir data e hora atual
-show_current_time() {
-    echo -e "Current Date and Time (UTC): $(date '+%Y-%m-%d %H:%M:%S')"
-    echo
-}
-
-# Função para animação de digitação
-type_text() {
-    text="$1"
-    for ((i=0; i<${#text}; i++)); do
-        echo -n "${text:$i:1}"
-        sleep 0.05
-    done
-    echo
-}
-
-# Códigos de cores ANSI
-blue="\e[34m"   # cor final: azul
-reset="\e[0m"
-
-# Vetor expandido com 15 cores em degradê
-colors=(
-    "\e[38;5;196m"  # Vermelho vivo
-    "\e[38;5;202m"  # Laranja escuro
-    "\e[38;5;208m"  # Laranja
-    "\e[38;5;214m"  # Laranja claro
-    "\e[38;5;220m"  # Amarelo
-    "\e[38;5;226m"  # Amarelo brilhante
-    "\e[38;5;190m"  # Verde-amarelado
-    "\e[38;5;118m"  # Verde claro
-    "\e[38;5;46m"   # Verde
-    "\e[38;5;48m"   # Verde água
-    "\e[38;5;51m"   # Ciano
-    "\e[38;5;45m"   # Azul claro
-    "\e[38;5;39m"   # Azul
-    "\e[38;5;63m"   # Azul-violeta
-    "\e[38;5;129m"  # Violeta
-)
-
-# Arte ASCII do DRL Edition
-ascii_art=(
-"██████╗ ██████╗  ██╗         ███████╗██████╗ ██╗████████╗██╗ ██████╗ ███╗   ██╗"
-"██╔══██╗██╔══██╗ ██║         ██╔════╝██╔══██╗██║╚══██╔══╝██║██╔═══██╗████╗  ██║"
-"██║  ██║██████╔╝ ██║         █████╗  ██║  ██║██║   ██║   ██║██║   ██║██╔██╗ ██║"
-"██║  ██║██╔══██╗ ██║         ██╔══╝  ██║  ██║██║   ██║   ██║██║   ██║██║╚██╗██║"
-"██████╔╝██║  ██║ ███████╗    ███████╗██████╔╝██║   ██║   ██║╚██████╔╝██║ ╚████║"
-"╚═════╝ ╚═╝  ╚═╝ ╚══════╝    ╚══════╝╚═════╝ ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝"
-)
-
-# Animação da arte ASCII com efeito degradê
-for ((k=0; k<3; k++)); do  # 3 ciclos completos
-    for ((i=0; i<${#colors[@]}; i++)); do
-        clear
-        # Mostra data e hora 
-        show_current_time
-        
-        # Mostra a arte ASCII na cor atual do degradê
-        for line in "${ascii_art[@]}"; do
-            echo -e "${colors[$i]}${line}${reset}"
-        done
-        sleep 0.1
-    done
-done
-
-# Mostra a versão final em azul
-clear
-show_current_time
-for line in "${ascii_art[@]}"; do
-    echo -e "${blue}${line}${reset}"
-done
-
-# Pula uma linha
-echo ""
-
-# Mensagem final com animação de digitação
-echo -ne "${PURPLE}"  # Cor roxa para a mensagem final
-type_text "Obrigado por executar este script!"
-type_text "Desenvolvido por DRLEdition19"
-sleep 2
-clear
-
-# DRL Installer
+#!/usr/bin/env bash 
+# profork INSTALLER
 ######################################################################
 ######################################################################
 ######################################################################
@@ -110,7 +20,7 @@ APPLINK=$(curl -s https://api.github.com/repos/Heroic-Games-Launcher/HeroicGames
 APPHOME=azul.com
 #---------------------------------------------------------------------
 #       DEFINE LAUNCHER COMMAND >>
-COMMAND='mkdir /userdata/system/configs/bat-drl/'$APPNAME'/home 2>/dev/null; mkdir /userdata/system/configs/bat-drl/'$APPNAME'/config 2>/dev/null; mkdir /userdata/system/configs/bat-drl/'$APPNAME'/roms 2>/dev/null; HOME=/userdata/system/configs/bat-drl/'$APPNAME'/home XDG_CONFIG_HOME=/userdata/system/configs/bat-drl/'$APPNAME'/config QT_SCALE_FACTOR="1" GDK_SCALE="1" XDG_DATA_HOME=/userdata/system/configs/bat-drl/'$APPNAME'/home DISPLAY=:0.0 /userdata/system/configs/bat-drl/'$APPNAME'/'$APPNAME'.AppImage --no-sandbox'
+COMMAND='mkdir /userdata/system/pro/'$APPNAME'/home 2>/dev/null; mkdir /userdata/system/pro/'$APPNAME'/config 2>/dev/null; mkdir /userdata/system/pro/'$APPNAME'/roms 2>/dev/null; HOME=/userdata/system/pro/'$APPNAME'/home XDG_CONFIG_HOME=/userdata/system/pro/'$APPNAME'/config QT_SCALE_FACTOR="1" GDK_SCALE="1" XDG_DATA_HOME=/userdata/system/pro/'$APPNAME'/home DISPLAY=:0.0 /userdata/system/pro/'$APPNAME'/'$APPNAME'.AppImage --no-sandbox'
 #--------------------------------------------------------------------- 
 ######################################################################
 ######################################################################
@@ -126,7 +36,7 @@ COMMAND='mkdir /userdata/system/configs/bat-drl/'$APPNAME'/home 2>/dev/null; mkd
 ######################################################################
 ######################################################################
 # --------------------------------------------------------------------
-APPNAME="${APPNAME^^}"; ORIGIN="${APPHOME^^}"; appname=$(echo "$APPNAME" | awk '{print tolower($0)}'); AppName=$appname; APPPATH=/userdata/system/configs/bat-drl/$appname/$AppName.AppImage
+APPNAME="${APPNAME^^}"; ORIGIN="${APPHOME^^}"; appname=$(echo "$APPNAME" | awk '{print tolower($0)}'); AppName=$appname; APPPATH=/userdata/system/pro/$appname/$AppName.AppImage
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
 # show console/ssh info: 
@@ -160,7 +70,7 @@ R=$X
 # --------------------------------------------------------------------
 # -- prepare paths and files for installation: 
 cd ~/
-pro=/userdata/system/configs/bat-drl/
+pro=/userdata/system/pro
 mkdir $pro 2>/dev/null
 mkdir $pro/extra 2>/dev/null
 rm -rf $pro/$appname 2>/dev/null
@@ -172,9 +82,9 @@ command=$pro/$appname/extra/command; rm $command 2>/dev/null;
 echo "$COMMAND" >> $command 2>/dev/null 
 # --------------------------------------------------------------------
 # -- prepare dependencies for this app and the installer: 
-mkdir -p ~/bat-drl/.dep 2>/dev/null && cd ~/bat-drl/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/bat-drl/.dep/dep.zip https://github.com/DRLEdition19/J2me-Batocera/raw/master/.dep/dep.zip && yes "y" | unzip -oq ~/bat-drl/.dep/dep.zip && cd ~/
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/DRLEdition19/J2me-Batocera/raw/master/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
-chmod 777 ~/bat-drl/.dep/* && for file in /userdata/system/configs/bat-drl/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
+mkdir -p ~/pro/.dep 2>/dev/null && cd ~/pro/.dep && wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O ~/pro/.dep/dep.zip https://github.com/DRLEdition19/Profork-2/raw/master/.dep/dep.zip && yes "y" | unzip -oq ~/pro/.dep/dep.zip && cd ~/
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$appname/extra/icon.png https://github.com/DRLEdition19/Profork-2/raw/master/$appname/extra/icon.png; chmod a+x $dep/* 2>/dev/null; cd ~/
+chmod 777 ~/pro/.dep/* && for file in /userdata/system/pro/.dep/lib*; do sudo ln -s "$file" "/usr/lib/$(basename $file)"; done
 # --------------------------------------------------------------------
 # // end of dependencies 
 #
@@ -182,8 +92,8 @@ chmod 777 ~/bat-drl/.dep/* && for file in /userdata/system/configs/bat-drl/.dep/
 # -- run before installer:  
 #killall wget 2>/dev/null && killall $AppName 2>/dev/null && killall $AppName 2>/dev/null && killall $AppName 2>/dev/null
 # --------------------------------------------------------------------
-cols=$($dep/tput cols) 2>/dev/null; rm -rf /userdata/system/configs/bat-drl/$appname/extra/cols 2>/dev/null
-echo $cols >> /userdata/system/configs/bat-drl/$appname/extra/cols 2>/dev/null
+cols=$($dep/tput cols) 2>/dev/null; rm -rf /userdata/system/pro/$appname/extra/cols 2>/dev/null
+echo $cols >> /userdata/system/pro/$appname/extra/cols 2>/dev/null
 line(){
 echo 1>/dev/null
 }
@@ -192,7 +102,7 @@ clear
 echo
 echo
 echo
-echo -e "${X}DRL_Installer/$APPNAME INSTALLER${X}"
+echo -e "${X}profork/$APPNAME INSTALLER${X}"
 echo
 echo
 echo
@@ -202,7 +112,7 @@ clear
 echo
 echo
 line $cols '-'; echo
-echo -e "${X}DRL_Installer/$APPNAME INSTALLER${X}"
+echo -e "${X}profork/$APPNAME INSTALLER${X}"
 line $cols '-'; echo
 echo
 echo
@@ -212,7 +122,7 @@ clear
 echo
 line $cols '-'; echo
 line $cols ' '; echo
-echo -e "${X}DRL_Installer/$APPNAME INSTALLER${X}"
+echo -e "${X}profork/$APPNAME INSTALLER${X}"
 line $cols ' '; echo
 line $cols '-'; echo
 echo
@@ -222,7 +132,7 @@ clear
 line $cols '\'; echo
 line $cols '/'; echo
 line $cols ' '; echo
-echo -e "${X}DRL_Installer/$APPNAME INSTALLER${X}"
+echo -e "${X}profork/$APPNAME INSTALLER${X}"
 line $cols ' '; echo
 line $cols '/'; echo
 line $cols '\'; echo
@@ -233,13 +143,13 @@ echo -e "${X}USING $ORIGIN JAVA JRE PACKAGES"
 echo -e "${X}VERSIONS: 19, 17, 15, 13, 11, 8"  
 echo
 echo -e "${X}$APPNAME RUNTIMES WILL BE INSTALLED IN:"
-echo -e "${X}/USERDATA/CONFIGS/BAT-DRL/PRO/$APPNAME" 
+echo -e "${X}/USERDATA/SYSTEM/PRO/$APPNAME" 
 echo
 #/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 # --------------------------------------------------------------------
 #\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 # -- THIS WILL BE SHOWN ON master BATOCERA DISPLAY:   
-function DRL-Installer {
+function PROFORK-installer {
 APPNAME=$1
 appname=$2
 AppName=$3
@@ -269,9 +179,9 @@ B=$BLUE
 G=$GREEN
 P=$PURPLE
 # --------------------------------------------------------------------
-cols=$(cat /userdata/system/configs/bat-drl/.dep/display.cfg | tail -n 1) 2>/dev/null
+cols=$(cat /userdata/system/pro/.dep/display.cfg | tail -n 1) 2>/dev/null
 cols=$(bc <<<"scale=0;$cols/1.3") 2>/dev/null
-#cols=$(cat /userdata/system/configs/bat-drl/$appname/extra/cols | tail -n 1)
+#cols=$(cat /userdata/system/pro/$appname/extra/cols | tail -n 1)
 line(){
 echo 1>/dev/null
 }
@@ -279,7 +189,7 @@ clear
 echo
 echo
 echo
-echo -e "${W}DRL_Installer/${G}$APPNAME${W} INSTALLER ${W}"
+echo -e "${W}profork/${G}$APPNAME${W} INSTALLER ${W}"
 echo
 echo
 echo
@@ -289,7 +199,7 @@ clear
 echo
 echo
 echo
-echo -e "${W}DRL_Installer/${W}$APPNAME${W} INSTALLER ${W}"
+echo -e "${W}profork/${W}$APPNAME${W} INSTALLER ${W}"
 echo
 echo
 echo
@@ -299,7 +209,7 @@ clear
 echo
 echo
 line $cols '-'; echo
-echo -e "${W}DRL_Installer/${G}$APPNAME${W} INSTALLER ${W}"
+echo -e "${W}profork/${G}$APPNAME${W} INSTALLER ${W}"
 line $cols '-'; echo
 echo
 echo
@@ -309,7 +219,7 @@ clear
 echo
 line $cols '-'; echo
 echo; #line $cols '-'; echo
-echo -e "${W}DRL_Installer/${W}$APPNAME${W} INSTALLER ${W}"
+echo -e "${W}profork/${W}$APPNAME${W} INSTALLER ${W}"
 echo; #line $cols '-'; echo
 line $cols '-'; echo
 echo
@@ -319,7 +229,7 @@ clear
 line $cols '='; echo
 echo; #line $cols '-'; echo
 echo; #line $cols '-'; echo
-echo -e "${W}DRL_Installer/${G}$APPNAME${W} INSTALLER ${W}"
+echo -e "${W}profork/${G}$APPNAME${W} INSTALLER ${W}"
 echo; #line $cols '-'; echo
 echo; #line $cols '-'; echo
 line $cols '='; echo
@@ -348,14 +258,14 @@ exit 0
 fi
 # --------------------------------------------------------------------
 # -- temp for curl download
-pro=/userdata/system/configs/bat-drl
+pro=/userdata/system/pro
 temp=$pro/$appname/extra/downloads
 rm -rf $temp 2>/dev/null 
 mkdir -p $temp 2>/dev/null
 # --------------------------------------------------------------------
 echo
 echo -e "${G}DOWNLOADING${W} [6] JAVA RUNTIME PACKAGES . . ."
-url=https://github.com/DRLEdition19/J2me-Batocera/raw/master/
+url=https://github.com/DRLEdition19/Profork-2/raw/master/
 cd $temp
 curl --progress-bar --remote-name --location "$url/$appname/extra/java19.tar.gz"
 curl --progress-bar --remote-name --location "$url/$appname/extra/java17.tar.gz"
@@ -415,8 +325,8 @@ cd ~/
 SIZE=$(du -sh $pro/$appname | awk '{print $1}') 2>/dev/null
 echo -e "${T}$pro/$appname  ${T}$SIZE( )  ${G}OK${W}" | sed 's/( )//g' 2>/dev/null
 # --------------------------------------------------------------------
-export='export PATH=/userdata/system/configs/bat-drl/java/bin:$PATH'
-find="system/configs/bat-drl/java"
+export='export PATH=/userdata/system/pro/java/bin:$PATH'
+find="system/pro/java"
 # --------------------------------------------------------------------
 # attach java runtime to ~/.profile
 file=/userdata/system/.profile
@@ -429,14 +339,14 @@ ln=$(cat $file | sed ""$l"q;d")
 if [[ "$(echo $ln | grep "$find")" != "" ]]; then :; else echo "$ln" >> $temp; fi
 ((l++))
 done
-echo -e '\nexport PATH=/userdata/system/configs/bat-drl/java/bin:$PATH && export JAVA_HOME=/userdata/system/configs/bat-drl/java' >> $temp
+echo -e '\nexport PATH=/userdata/system/pro/java/bin:$PATH && export JAVA_HOME=/userdata/system/pro/java' >> $temp
 cp $temp $file 2>/dev/null; rm $temp 2>/dev/null
   else
-echo -e '\nexport PATH=/userdata/system/configs/bat-drl/java/bin:$PATH && export JAVA_HOME=/userdata/system/configs/bat-drl/java' >> $file
+echo -e '\nexport PATH=/userdata/system/pro/java/bin:$PATH && export JAVA_HOME=/userdata/system/pro/java' >> $file
   fi
 dos2unix /userdata/system/.profile 2>/dev/null
 #source ~/.profile 
-export PATH="/userdata/system/configs/bat-drl/java/bin:${PATH}" && export JAVA_HOME=/userdata/system/configs/bat-drl/java
+export PATH="/userdata/system/pro/java/bin:${PATH}" && export JAVA_HOME=/userdata/system/pro/java
 # --------------------------------------------------------------------
 # attach java runtime to ~/.bashrc
 file=/userdata/system/.bashrc
@@ -449,45 +359,45 @@ ln=$(cat $file | sed ""$l"q;d")
 if [[ "$(echo $ln | grep "$find")" != "" ]]; then :; else echo "$ln" >> $temp; fi
 ((l++))
 done
-echo -e '\nexport PATH=/userdata/system/configs/bat-drl/java/bin:$PATH && export JAVA_HOME=/userdata/system/configs/bat-drl/java' >> $temp
+echo -e '\nexport PATH=/userdata/system/pro/java/bin:$PATH && export JAVA_HOME=/userdata/system/pro/java' >> $temp
 cp $temp $file 2>/dev/null; rm $temp 2>/dev/null
   else
-echo -e '\nexport PATH=/userdata/system/configs/bat-drl/java/bin:$PATH && export JAVA_HOME=/userdata/system/configs/bat-drl/java' >> $file
+echo -e '\nexport PATH=/userdata/system/pro/java/bin:$PATH && export JAVA_HOME=/userdata/system/pro/java' >> $file
   fi
 dos2unix /userdata/system/.bashrc 2>/dev/null
 # --------------------------------------------------------------------
 # run export: 
-export PATH=/userdata/system/configs/bat-drl/java/bin:$PATH
-export JAVA_HOME=/userdata/system/configs/bat-drl/java
+export PATH=/userdata/system/pro/java/bin:$PATH
+export JAVA_HOME=/userdata/system/pro/java
 # -- prepare launcher to solve dependencies on each run and avoid overlay, 
-launcher=/userdata/system/configs/bat-drl/$appname/Launcher
+launcher=/userdata/system/pro/$appname/Launcher
 rm -rf $launcher
 echo '#!/bin/bash ' >> $launcher
-echo 'export PATH=/userdata/system/configs/bat-drl/java/bin:$PATH && export JAVA_HOME=/userdata/system/configs/bat-drl/java' >> $launcher
+echo 'export PATH=/userdata/system/pro/java/bin:$PATH && export JAVA_HOME=/userdata/system/pro/java' >> $launcher
 echo 'function get-java-version {' >> $launcher
 echo 'W="\033[0;37m" ' >> $launcher
 echo 'G="\033[1;32m" ' >> $launcher
 # 
-echo 'java=/userdata/system/configs/bat-drl/java/bin/java' >> $launcher
+echo 'java=/userdata/system/pro/java/bin/java' >> $launcher
 echo 'if [[ -e "$java" ]]; then echo -e "${G}> DEFAULT JAVA RUNTIME${W}"; $java --version | grep openjdk; sleep 0.33; echo; echo' >> $launcher
 echo 'else echo -e "${W}DEFAULT JAVA RUNTIME NOT FOUND"; sleep 0.33; echo; echo; fi' >> $launcher
-echo 'java19=/userdata/system/configs/bat-drl/java/java19/bin/java' >> $launcher
-echo 'if [[ -e "$java19" ]]; then echo -e "${G}~/bat-drl/java/java19${W}"; $java19 --version | grep openjdk; sleep 0.33; echo' >> $launcher
+echo 'java19=/userdata/system/pro/java/java19/bin/java' >> $launcher
+echo 'if [[ -e "$java19" ]]; then echo -e "${G}~/pro/java/java19${W}"; $java19 --version | grep openjdk; sleep 0.33; echo' >> $launcher
 echo 'else echo -e "${W}JAVA 19 NOT FOUND"; echo; sleep 0.33; echo; fi' >> $launcher
-echo 'java17=/userdata/system/configs/bat-drl/java/java17/bin/java' >> $launcher
-echo 'if [[ -e "$java17" ]]; then echo -e "${G}~/bat-drl/java/java17${W}"; $java17 --version | grep openjdk; sleep 0.33; echo' >> $launcher
+echo 'java17=/userdata/system/pro/java/java17/bin/java' >> $launcher
+echo 'if [[ -e "$java17" ]]; then echo -e "${G}~/pro/java/java17${W}"; $java17 --version | grep openjdk; sleep 0.33; echo' >> $launcher
 echo 'else echo -e "${W}JAVA 17 NOT FOUND"; echo; sleep 0.33; echo; fi' >> $launcher
-echo 'java15=/userdata/system/configs/bat-drl/java/java15/bin/java' >> $launcher
-echo 'if [[ -e "$java15" ]]; then echo -e "${G}~/bat-drl/java/java15${W}"; $java15 --version | grep openjdk; sleep 0.33; echo' >> $launcher
+echo 'java15=/userdata/system/pro/java/java15/bin/java' >> $launcher
+echo 'if [[ -e "$java15" ]]; then echo -e "${G}~/pro/java/java15${W}"; $java15 --version | grep openjdk; sleep 0.33; echo' >> $launcher
 echo 'else echo -e "${W}JAVA 15 NOT FOUND"; echo; sleep 0.33; echo; fi' >> $launcher
-echo 'java13=/userdata/system/configs/bat-drl/java/java13/bin/java' >> $launcher
-echo 'if [[ -e "$java13" ]]; then echo -e "${G}~/bat-drl/java/java13${W}"; $java13 --version | grep openjdk; sleep 0.33; echo' >> $launcher
+echo 'java13=/userdata/system/pro/java/java13/bin/java' >> $launcher
+echo 'if [[ -e "$java13" ]]; then echo -e "${G}~/pro/java/java13${W}"; $java13 --version | grep openjdk; sleep 0.33; echo' >> $launcher
 echo 'else echo -e "${W}JAVA 13 NOT FOUND"; echo; sleep 0.33; echo; fi' >> $launcher
-echo 'java11=/userdata/system/configs/bat-drl/java/java11/bin/java' >> $launcher
-echo 'if [[ -e "$java11" ]]; then echo -e "${G}~/bat-drl/java/java11${W}"; $java11 --version | grep openjdk; sleep 0.33; echo' >> $launcher
+echo 'java11=/userdata/system/pro/java/java11/bin/java' >> $launcher
+echo 'if [[ -e "$java11" ]]; then echo -e "${G}~/pro/java/java11${W}"; $java11 --version | grep openjdk; sleep 0.33; echo' >> $launcher
 echo 'else echo -e "${W}JAVA 11 NOT FOUND"; echo; sleep 0.33; echo; fi' >> $launcher
-echo 'java8=/userdata/system/configs/bat-drl/java/java8/bin/java' >> $launcher
-echo 'if [[ -e "$java8" ]]; then echo -e "${G}~/bat-drl/java/java8${W}"; $java8 --version | grep openjdk; sleep 0.33; echo' >> $launcher
+echo 'java8=/userdata/system/pro/java/java8/bin/java' >> $launcher
+echo 'if [[ -e "$java8" ]]; then echo -e "${G}~/pro/java/java8${W}"; $java8 --version | grep openjdk; sleep 0.33; echo' >> $launcher
 echo 'else echo -e "${W}JAVA 8 NOT FOUND"; echo; sleep 0.33; echo; fi' >> $launcher
 echo 'echo ' >> $launcher
 echo 'echo "will close after 10 seconds"' >> $launcher
@@ -496,16 +406,16 @@ echo 'sleep 10' >> $launcher
 echo '}' >> $launcher
 echo 'export -f get-java-version 2>/dev/null' >> $launcher
 echo 'function get-xterm-fontsize {' >> $launcher
-echo 'tput=/userdata/system/configs/bat-drl/.dep/tput; chmod a+x $tput;' >> $launcher 
-echo 'ln -s /userdata/system/configs/bat-drl/.dep/libtinfo.so.6 /usr/lib/libtinfo.so.6 2>/dev/null' >> $launcher
-echo 'cfg=/userdata/system/configs/bat-drl/.dep/display.cfg; rm $cfg 2>/dev/null' >> $launcher
+echo 'tput=/userdata/system/pro/.dep/tput; chmod a+x $tput;' >> $launcher 
+echo 'ln -s /userdata/system/pro/.dep/libtinfo.so.6 /usr/lib/libtinfo.so.6 2>/dev/null' >> $launcher
+echo 'cfg=/userdata/system/pro/.dep/display.cfg; rm $cfg 2>/dev/null' >> $launcher
 echo 'DISPLAY=:0.0 xterm -fullscreen -bg "black" -fa "Monospace" -e bash -c "$tput cols >> $cfg" 2>/dev/null' >> $launcher
 echo 'cols=$(cat $cfg | tail -n 1) 2>/dev/null' >> $launcher
 echo 'TEXT_SIZE=$(bc <<<"scale=0;$cols/16") 2>/dev/null' >> $launcher
 echo '}' >> $launcher
 echo 'export -f get-xterm-fontsize 2>/dev/null' >> $launcher
 echo 'get-xterm-fontsize 2>/dev/null' >> $launcher
-echo 'cfg=/userdata/system/configs/bat-drl/.dep/display.cfg' >> $launcher
+echo 'cfg=/userdata/system/pro/.dep/display.cfg' >> $launcher
 echo 'cols=$(cat $cfg | tail -n 1) 2>/dev/null' >> $launcher
 echo 'until [[ "$cols" != "80" ]] ' >> $launcher
 echo 'do' >> $launcher
@@ -516,15 +426,15 @@ echo 'TEXT_SIZE=$(bc <<<"scale=0;$cols/16") 2>/dev/null' >> $launcher
 echo 'DISPLAY=:0.0 xterm -fullscreen -bg black -fa 'Monospace' -fs $TEXT_SIZE -e bash -c "get-java-version" 2>/dev/null' >> $launcher
 dos2unix $launcher 2>/dev/null
 chmod a+x $launcher 2>/dev/null
-rm /userdata/system/configs/bat-drl/$appname/extra/command 2>/dev/null
+rm /userdata/system/pro/$appname/extra/command 2>/dev/null
 # --------------------------------------------------------------------
 # -- prepare f1 - applications - app shortcut, 
-shortcut=/userdata/system/configs/bat-drl/$appname/extra/$appname.desktop
+shortcut=/userdata/system/pro/$appname/extra/$appname.desktop
 rm -rf $shortcut 2>/dev/null
 echo "[Desktop Entry]" >> $shortcut
 echo "Version=1.0" >> $shortcut 
-echo "Icon=/userdata/system/configs/bat-drl/$appname/extra/icon.png" >> $shortcut
-echo "Exec=/userdata/system/configs/bat-drl/$appname/Launcher" >> $shortcut
+echo "Icon=/userdata/system/pro/$appname/extra/icon.png" >> $shortcut
+echo "Exec=/userdata/system/pro/$appname/Launcher" >> $shortcut
 echo "Terminal=false" >> $shortcut
 echo "Type=Application" >> $shortcut
 echo "Categories=Game;batocera.linux;" >> $shortcut
@@ -535,26 +445,26 @@ chmod a+x $shortcut 2>/dev/null
 cp $shortcut $f1shortcut 2>/dev/null
 # --------------------------------------------------------------------
 # -- prepare prelauncher to avoid overlay,
-pre=/userdata/system/configs/bat-drl/$appname/extra/startup
+pre=/userdata/system/pro/$appname/extra/startup
 rm -rf $pre 2>/dev/null
 echo "#!/usr/bin/env bash" >> $pre
-echo "cp /userdata/system/configs/bat-drl/$appname/extra/$appname.desktop /usr/share/applications/ 2>/dev/null" >> $pre
-#echo "cp /userdata/system/configs/bat-drl/$appname/bin/java /usr/bin/java 2>/dev/null" >> $pre
-echo "ln -sf /userdata/system/configs/bat-drl/$appname/bin/java /usr/bin/java 2>/dev/null" >> $pre
-echo "ln -s /userdata/system/configs/bat-drl/.dep/libselinux.so.1 /usr/lib/libselinux.so.1 2>/dev/null" >> $pre
-echo "ln -s /userdata/system/configs/bat-drl/.dep/tar /bin/tar 2>/dev/null" >> $pre
+echo "cp /userdata/system/pro/$appname/extra/$appname.desktop /usr/share/applications/ 2>/dev/null" >> $pre
+#echo "cp /userdata/system/pro/$appname/bin/java /usr/bin/java 2>/dev/null" >> $pre
+echo "ln -sf /userdata/system/pro/$appname/bin/java /usr/bin/java 2>/dev/null" >> $pre
+echo "ln -s /userdata/system/pro/.dep/libselinux.so.1 /usr/lib/libselinux.so.1 2>/dev/null" >> $pre
+echo "ln -s /userdata/system/pro/.dep/tar /bin/tar 2>/dev/null" >> $pre
 dos2unix $pre 2>/dev/null
 chmod a+x $pre 2>/dev/null
 # -- add prelauncher to custom.sh to run @ reboot
 csh=/userdata/system/custom.sh
-if [[ -e $csh ]] && [[ "$(cat $csh | grep "/userdata/system/configs/bat-drl/$appname/extra/startup")" = "" ]]; then
-echo -e "\n/userdata/system/configs/bat-drl/$appname/extra/startup" >> $csh
+if [[ -e $csh ]] && [[ "$(cat $csh | grep "/userdata/system/pro/$appname/extra/startup")" = "" ]]; then
+echo -e "\n/userdata/system/pro/$appname/extra/startup" >> $csh
 fi
-if [[ -e $csh ]] && [[ "$(cat $csh | grep "/userdata/system/configs/bat-drl/$appname/extra/startup" | grep "#")" != "" ]]; then
-echo -e "\n/userdata/system/configs/bat-drl/$appname/extra/startup" >> $csh
+if [[ -e $csh ]] && [[ "$(cat $csh | grep "/userdata/system/pro/$appname/extra/startup" | grep "#")" != "" ]]; then
+echo -e "\n/userdata/system/pro/$appname/extra/startup" >> $csh
 fi
 if [[ -e $csh ]]; then :; else
-echo -e "\n/userdata/system/configs/bat-drl/$appname/extra/startup" >> $csh
+echo -e "\n/userdata/system/pro/$appname/extra/startup" >> $csh
 fi
 dos2unix $csh 2>/dev/null
 chmod a+x $csh 2>/dev/null
@@ -567,28 +477,28 @@ echo
 echo -e "${G}> $APPNAME INSTALLED ${G}OK${W}"
 sleep 0.5
 echo -e "${W}TO CHANGE THE DEFAULT JAVA VERSION: COPY CONTENTS OF"
-echo -e "${W}~/bat-drl/java/java[VER] TO THE master ~/bat-drl/java FOLDER"
+echo -e "${W}~/pro/java/java[VER] TO THE master ~/pro/java FOLDER"
 echo
 line $cols '='; echo
 sleep 10
 }
-export -f DRL-Installer 2>/dev/null
+export -f PROFORK-installer 2>/dev/null
 # --------------------------------------------------------------------
 # RUN:
 # |
-  DRL-Installer "$APPNAME" "$appname" "$AppName" "$APPPATH" "$APPLINK" "$ORIGIN"
+  PROFORK-installer "$APPNAME" "$appname" "$AppName" "$APPPATH" "$APPLINK" "$ORIGIN"
 # --------------------------------------------------------------------
-# DRL Installer //
+# profork INSTALLER //
 ##########################
 clear
-if [[ -e "/userdata/system/configs/bat-drl/java/java19/bin/java" ]] && [[ -e "/userdata/system/configs/bat-drl/java/java17/bin/java" ]] && [[ -e "/userdata/system/configs/bat-drl/java/java15/bin/java" ]] && [[ -e "/userdata/system/configs/bat-drl/java/java13/bin/java" ]] && [[ -e "/userdata/system/configs/bat-drl/java/java11/bin/java" ]] && [[ -e "/userdata/system/configs/bat-drl/java/java8/bin/java" ]]; then
+if [[ -e "/userdata/pro/java/java19/bin/java" ]] && [[ -e "/userdata/pro/java/java17/bin/java" ]] && [[ -e "/userdata/pro/java/java15/bin/java" ]] && [[ -e "/userdata/pro/java/java13/bin/java" ]] && [[ -e "/userdata/pro/java/java11/bin/java" ]] && [[ -e "/userdata/pro/java/java8/bin/java" ]]; then
 echo
 echo
 echo -e "${W}> $APPNAME INSTALLED ${G}OK${W}"
 echo 
 echo 
 echo -e "${W}TO CHANGE THE DEFAULT JAVA VERSION: COPY CONTENTS OF"
-echo -e "${W}~/bat-drl/java/java[VER] TO THE MAIN ~/bat-drl/java FOLDER"
+echo -e "${W}~/pro/java/java[VER] TO THE MAIN ~/pro/java FOLDER"
 echo
 echo
 fi
