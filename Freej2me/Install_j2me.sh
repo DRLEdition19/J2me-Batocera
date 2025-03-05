@@ -14,7 +14,7 @@ mkdir -p $TEMP_DIR
 
 # Faz o download do arquivo drl 
 echo "Fazendo download do arquivo freej2me.drl..."
-curl -L -o $DRL_FILE "https://github.com/DRLEdition19/J2me-Batocera/raw/refs/heads/main/Freej2me/extra/freej2me.zip" | bash
+curl -L -o $DRL_FILE https://github.com/DRLEdition19/J2me-Batocera/raw/refs/heads/main/Freej2me/extra/freej2me.zip | bash
 
 # Extrai o arquivo drl com barra de progresso e altera permissões de cada arquivo extraído
 echo "Extraindo o arquivo drl e definindo permissões para cada arquivo..."
