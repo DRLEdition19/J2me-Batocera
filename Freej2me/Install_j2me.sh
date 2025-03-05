@@ -183,8 +183,8 @@ echo "Salvando alterações..."
 batocera-save-overlay
 
 # Verifica se o diretório /userdata/system/pro/java existe
-if [ -d "/userdata/system/configs/bat-drl/java" ]; then
-    echo "O diretório /userdata/system/configs/bat-drl/java já existe. Finalizando o script."
+if [ -d "/userdata/system/pro/java" ]; then
+    echo "O diretório /userdata/system/pro/java já existe. Finalizando o script."
     exit 0
 fi
 
