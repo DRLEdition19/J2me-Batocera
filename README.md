@@ -30,7 +30,7 @@ Lembrando que a emulação padrão do Freej2me já conta com um recurso de recon
 ---
 # Teclas e atalhos de controle de entrada para o emulador Freej2me instalado no Datocera.
 
-![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/joytick.jpg?raw=true) ![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/joytick.jpg?raw=true)
+![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/joytick.jpg?raw=true) ![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/joytick2.jpg?raw=true)
 
 # Estas configurações de controle abaixo, são correspondentes com os botões do teclado ilustrado acima
 ---
