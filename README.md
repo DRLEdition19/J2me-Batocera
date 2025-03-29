@@ -43,10 +43,10 @@ Lembrando que a emulação padrão do Freej2me já conta com um recurso de recon
 | **⭕ / A** ou **R1**  |       W        |     Tecla de voltar     |
 | **L2**           |       E        |        *         |
 | **R2**           |       R        |        #         |
-| **🕹L-ANALOG**     |   Number Row   |  Keypad Numbers  |
-| **🕹L-ANALOG**     | Numpad's 7,8,9 |      1,2,3       |
-| **🕹L-ANALOG**     | Numpad's 4,5,6 |      4,5,6       |
-| **🕹L-ANALOG**     | Numpad's 1,2,3 |      7,8,9       |
+| **D-PAD** ou **🕹L-ANALOG **      |   Linha de números   |  Teclado numérico  |
+| **D-PAD** ou **🕹L-ANALOG **      | Teclado numérico 7,8,9 |      1,2,3       |
+| **D-PAD** ou **🕹L-ANALOG **      | Teclado numérico 4,5,6 |      4,5,6       |
+| **D-PAD** ou **🕹L-ANALOG **      | Teclado numérico 1,2,3 |      7,8,9       |
 
 ## Atalhos de teclado Padrão
 
