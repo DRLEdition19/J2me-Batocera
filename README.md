@@ -35,7 +35,7 @@ A emulação padrão do Freej2me já conta com um recurso de reconhecimento do G
 
 # Estas configurações de controle abaixo, são correspondentes com os botões do teclado ilustrado acima
 ---
-## Atalhos de teclado Comuns
+## Atalhos de Teclado Comuns
 
 |**🎮Gamepad / Joystick🕹️**|    **Teclas**     | **Funções como** |
 | :--------------: | :------------: | :--------------: |
@@ -49,7 +49,7 @@ A emulação padrão do Freej2me já conta com um recurso de reconhecimento do G
 | **D-PAD** ou **🕹L-ANALOG**      | Teclado numérico 4,5,6 |      4,5,6       |
 | **D-PAD** ou **🕹L-ANALOG**      | Teclado numérico 1,2,3 |      7,8,9       |
 
-## Atalhos de teclado Padrão
+## Atalhos de Teclado Padrão
 
 Todas as **combinações de teclas comuns** a seguir:
 
@@ -61,7 +61,7 @@ Todas as **combinações de teclas comuns** a seguir:
 | **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Direita.png?raw=true)D-PAD RIGHT** ou **🕹L-ANALOG RIGHT** |  Seta para direita   | 6 |
 | **✖️ / B**                                 |       Enter          | 5 |
 
-## Atalhos de teclado Nokia
+## Atalhos de Teclado Nokia
 
 Todas as **teclas de atalhos comuns** a seguir:
 
