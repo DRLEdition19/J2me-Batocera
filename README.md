@@ -28,9 +28,10 @@ Este recurso foi implementado para garantir a sua boa usabilidade durante as emu
 Lembrando que a emulação padrão do Freej2me já conta com um recurso de reconhecimento do Gamepad. No entanto, a emulação pelo Retroarch ainda continua em fase de testes, mas você poderá realizar testes e personalizá-lo.
 
 ---
-# Teclas e atalhos de controle de entrada para o emulador Freej2me instalado no Datocera.
+# Teclas e atalhos de controle de entrada para o emulador Freej2me instalado no Batocera.
+## Lembrando que a emulação padrão do Freej2me já conta com um recurso de reconhecimento do Gamepad. No entanto, a emulação pelo Retroarch ainda continua em fase de testes, mas você poderá realizar testes e personalizá-lo.
 
-![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/joytick.jpg?raw=true) ![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/joytick2.jpg?raw=true)
+![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/joytick.jpg?raw=true)
 
 # Estas configurações de controle abaixo, são correspondentes com os botões do teclado ilustrado acima
 ---
