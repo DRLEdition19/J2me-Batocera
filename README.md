@@ -13,15 +13,9 @@ Para iniciar a instalação, copie o comando abaixo, cole em seu terminal, e dê
 curl -L bit.ly/drl-j2me | bash
 ```
 
-E caso queira instalar apenas o Java Runtime, rode este comando em seu terminal:
-
-```sh
-curl -L bit.ly/drl-java | bash
-```
-
 Lembrando que este instalador, após a instalação concluída, contará com duas versões do Freej2me:
 1. **Freej2me bruto**: O emulador padrão.
-2. **Freej2me com emulação pelo Retroarch**: Através do core libretro.
+2. **Freej2me com emulação pelo Retroarch**: Através do core libretro do Retroarch.
 
 ## 🔄 Alternando Entre Emulações
 
@@ -31,7 +25,7 @@ Este recurso foi implementado para garantir a sua boa usabilidade durante as emu
 
 ## 🎮 Suporte ao Gamepad
 
-Lembrando que a emulação padrão do Freej2me já conta com um recurso de reconhecimento do Gamepad. No entanto, a emulação pelo Retroarch ainda continua em fase de testes, mas você poderá personalizá-lo.
+Lembrando que a emulação padrão do Freej2me já conta com um recurso de reconhecimento do Gamepad. No entanto, a emulação pelo Retroarch ainda continua em fase de testes, mas você poderá realizar testes e personalizá-lo.
 
 ---
 
