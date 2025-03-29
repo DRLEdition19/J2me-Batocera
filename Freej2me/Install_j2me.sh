@@ -130,6 +130,18 @@ fi
 echo "Copying files to the system..."
 cp -r $EXTRACT_DIR/* $DEST_DIR
 
+# Set the file path
+FILE="/usr/share/batocera/configgen/configgen-defaults.yml"
+
+# Check if the information is already in the file
+if ! grep -q "j2me:" "$FILE"; then
+    # Add the desired content to the file
+    echo -e "\nj2me:\n  emulator: libretro\n  core:     freej2me" >> "$FILE"
+    echo "Information added to the file."
+else
+    echo "The information already exists in the file. No changes were made."
+fi
+
 # Clean up
 echo "Cleaning up..."
 rm -rf $TEMP_DIR
@@ -138,5 +150,6 @@ rm -rf $TEMP_DIR
 echo "Saving changes..."
 batocera-save-overlay
 
-echo "Installation completed successfully."
+type_text "Installation completed successfully."
+type_text "Developed by DRLEdition19"  
 killall -9 emulationstation
