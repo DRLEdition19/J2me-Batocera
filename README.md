@@ -39,14 +39,14 @@ Lembrando que a emulação padrão do Freej2me já conta com um recurso de recon
 |**🎮Gamepad / Joystick🕹️**|    **Teclas**     | **Funções como** |
 | :--------------: | :------------: | :--------------: |
 | **Start**        |      Esc       | Menu de Opções do freej2me |
-| **X** ou **L1**  |       Q        |   Tecla de Opções / Selecionar    |
-| **A** ou **R1**  |       W        |     Tecla de voltar     |
+| **🔺 / X** ou **L1**  |       Q        |   Tecla de Opções / Selecionar    |
+| **⭕ / A** ou **R1**  |       W        |     Tecla de voltar     |
 | **L2**           |       E        |        *         |
 | **R2**           |       R        |        #         |
-| **L-ANALOG**     |   Number Row   |  Keypad Numbers  |
-| **L-ANALOG**     | Numpad's 7,8,9 |      1,2,3       |
-| **L-ANALOG**     | Numpad's 4,5,6 |      4,5,6       |
-| **L-ANALOG**     | Numpad's 1,2,3 |      7,8,9       |
+| **🕹L-ANALOG**     |   Number Row   |  Keypad Numbers  |
+| **🕹L-ANALOG**     | Numpad's 7,8,9 |      1,2,3       |
+| **🕹L-ANALOG**     | Numpad's 4,5,6 |      4,5,6       |
+| **🕹L-ANALOG**     | Numpad's 1,2,3 |      7,8,9       |
 
 ## Atalhos de teclado Padrão
 
@@ -54,11 +54,11 @@ Todas as **combinações de teclas comuns** a seguir:
 
 |**🎮Gamepad / Joystick🕹️**|    **Teclas**     | **Funções como** |
 | :--------------: | :---------: | :--------------: |
-| **D-PAD UP** ou **L-ANALOG UP**       |  Seta para cima      | 2 |
-| **D-PAD DOWN** ou **L-ANALOG DOWN**   |  Seta para baixo     | 8 |
-| **D-PAD LEFT** ou **L-ANALOG LEFT**   |  Seta para esquerda  | 4 |
-| **D-PAD RIGHT** ou **L-ANALOG RIGHT** |  Seta para direita   | 6 |
-| **B**                                 |       Enter          | 5 |
+| **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Acima.jpg?raw=true)D-PAD UP** ou **🕹L-ANALOG UP**       |  Seta para cima      | 2 |
+| **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Abaixo.jpg?raw=true)D-PAD DOWN** ou **🕹L-ANALOG DOWN**   |  Seta para baixo     | 8 |
+| **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Esquerda.jpg?raw=true)D-PAD LEFT** ou **🕹L-ANALOG LEFT**   |  Seta para esquerda  | 4 |
+| **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Direira.jpg?raw=true)D-PAD RIGHT** ou **🕹L-ANALOG RIGHT** |  Seta para direita   | 6 |
+| **✖️ / B**                                 |       Enter          | 5 |
 
 ## Atalhos de teclado Nokia
 
@@ -66,11 +66,11 @@ Todas as **teclas de atalhos comuns** a seguir:
 
 |**🎮Gamepad / Joystick🕹️**|    **Teclas**     | **Funções como** |
 | :--------------: | :------------: | :--------------------: |
-| **D-PAD UP** ou **L-ANALOG UP**       | Seta para cima     |            Para Cima            |
-| **D-PAD DOWN** ou **L-ANALOG DOWN**   | Seta para baixo    |           Para Baixo            |
-| **D-PAD LEFT** ou **L-ANALOG LEFT**   | Seta para esquerda |          Para Esquerda          |
-| **D-PAD RIGHT** ou **L-ANALOG RIGHT** | Seta para direita  |          Para Direita           |
-| **B**                                 |      Enter         | Tecla de ação (botão de **OK**) | 
+| **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Acima.jpg?raw=true)D-PAD UP** ou **🕹L-ANALOG UP**       | Seta para cima     |            Para Cima            |
+| **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Abaixo.jpg?raw=true)D-PAD DOWN** ou **🕹L-ANALOG DOWN**   | Seta para baixo    |           Para Baixo            |
+| **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Esquerda.jpg?raw=true)D-PAD LEFT** ou **🕹L-ANALOG LEFT**   | Seta para esquerda |          Para Esquerda          |
+| **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Direira.jpg?raw=true)D-PAD RIGHT** ou **🕹L-ANALOG RIGHT** | Seta para direita  |          Para Direita           |
+| **✖️ / B**                                 |      Enter         | Tecla de ação (botão de **OK**) | 
 
 ---
 
