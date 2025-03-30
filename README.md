@@ -63,6 +63,7 @@ Todas as **combinações de teclas comuns** a seguir:
 | **🕹R-ANALOG RIGHT**   | Teclado numérico | 3 |
 | **🕹R-ANALOG up**      | Teclado numérico | 7 |
 | **🕹R-ANALOG DOWN**    | Teclado numérico | 9 |
+| **□ / Y**             |       A         | ??? |
 | **✖️ / B**             |       Enter      | 5 |
 
 ## Atalhos de Teclado Nokia
