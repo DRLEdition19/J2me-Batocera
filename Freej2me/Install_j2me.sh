@@ -144,7 +144,7 @@ else
 fi
 
 # Check if the information is already in the file batocera.conf
-if ! grep -q "j2me" "$FILE2"; then
+if ! grep -q "j2me" "$FILE"; then
     # Add the desired content to the file
     echo -e "\nj2me.core=freej2me\nj2me.emulator=libretro" >> "$FILE2"
     echo "Information added to the file."
