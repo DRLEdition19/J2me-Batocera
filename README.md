@@ -59,10 +59,10 @@ Todas as **combinações de teclas comuns** a seguir:
 | **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Abaixo.png?raw=true)D-PAD DOWN** ou **🕹L-ANALOG DOWN**   |  Seta para baixo     | 8 |
 | **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Esquerda.png?raw=true)D-PAD LEFT** ou **🕹L-ANALOG LEFT**   |  Seta para esquerda  | 4 |
 | **![image](https://github.com/DRLEdition19/J2me-Batocera/blob/main/Freej2me/extra/Direita.png?raw=true)D-PAD RIGHT** ou **🕹L-ANALOG RIGHT** |  Seta para direita   | 6 |
-| **🕹R-ANALOG LEFT**    | Teclado numérico | 1 |
-| **🕹R-ANALOG RIGHT**   | Teclado numérico | 3 |
-| **🕹R-ANALOG up**      | Teclado numérico | 7 |
-| **🕹R-ANALOG DOWN**    | Teclado numérico | 9 |
+| **🕹R-ANALOG LEFT**    | Tecla superior diagonal esquerda | 1 |
+| **🕹R-ANALOG RIGHT**   | Tecla superior diagonal direita | 3 |
+| **🕹R-ANALOG up**      | Tecla inferior diagonal esquerda | 7 |
+| **🕹R-ANALOG DOWN**    | Tecla inferior diagonal direita | 9 |
 | **□ / Y**             |       A         | ??? |
 | **✖️ / B**             |       Enter      | 5 |
 
