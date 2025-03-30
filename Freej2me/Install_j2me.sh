@@ -132,11 +132,21 @@ cp -r $EXTRACT_DIR/* $DEST_DIR
 
 # Set the file path
 FILE="/usr/share/batocera/configgen/configgen-defaults.yml"
+FILE2="/userdata/system/batocera.conf"
 
-# Check if the information is already in the file
-if ! grep -q "j2me:" "$FILE"; then
+# Check if the information is already in the file configgen-defaults.yml
+if ! grep -q "j2me:" "$FILE2"; then
     # Add the desired content to the file
     echo -e "\nj2me:\n  emulator: libretro\n  core:     freej2me" >> "$FILE"
+    echo "Information added to the file."
+else
+    echo "The information already exists in the file. No changes were made."
+fi
+
+# Check if the information is already in the file batocera.conf
+if ! grep -q "j2me" "$FILE2"; then
+    # Add the desired content to the file
+    echo -e "\nj2me.core=freej2me\nj2me.emulator=libretro" >> "$FILE2"
     echo "Information added to the file."
 else
     echo "The information already exists in the file. No changes were made."
