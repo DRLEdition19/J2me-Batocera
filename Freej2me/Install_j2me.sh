@@ -126,31 +126,31 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Copy the extracted files to the root directory
-echo "Copying files to the system..."
-cp -r $EXTRACT_DIR/* $DEST_DIR
+# Mover os arquivos extraídos para o diretório raiz
+echo "Moving files to the system..."
+mv -f $EXTRACT_DIR/* $DEST_DIR
 
 # Set the file path
 FILE="/usr/share/batocera/configgen/configgen-defaults.yml"
 FILE2="/userdata/system/batocera.conf"
 
-# Check if the information is already in the file configgen-defaults.yml
-if ! grep -q "j2me:" "$FILE"; then
-    # Add the desired content to the file
-    echo -e "\nj2me:\n  emulator: libretro\n  core:     freej2me" >> "$FILE"
-    echo "Information added to the file."
-else
-    echo "The information already exists in the file. No changes were made."
-fi
+# Função para substituir ou adicionar conteúdo em um arquivo
+substitute_or_add() {
+    local file="$1"
+    local search="$2"
+    local replace="$3"
+    if grep -q "$search" "$file"; then
+        sed -i "s|$search|$replace|g" "$file"
+    else
+        echo -e "$replace" >> "$file"
+    fi
+}
 
-# Check if the information is already in the file batocera.conf
-if ! grep -q "j2me" "$FILE2"; then
-    # Add the desired content to the file
-    echo -e "\nj2me.core=freej2me\nj2me.emulator=libretro" >> "$FILE2"
-    echo "Information added to the file."
-else
-    echo "The information already exists in the file. No changes were made."
-fi
+# Substituir ou adicionar informações no arquivo configgen-defaults.yml
+substitute_or_add "$FILE" "j2me:" "\nj2me:\n  emulator: libretro\n  core:     freej2me"
+
+# Substituir ou adicionar informações no arquivo batocera.conf
+substitute_or_add "$FILE2" "j2me.core=freej2me" "\nj2me.core=freej2me\nj2me.emulator=libretro"
 
 # Clean up
 echo "Cleaning up..."
