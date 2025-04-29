@@ -5,6 +5,8 @@ Seja bem-vindo ao projeto para instalar em seu Batocera o emulador de jogos Java
 
 Este projeto conta com todos os recursos necessários para que tudo seja funcional em seu Batocera.
 
+Este projeto foi testado, com sucesso, no Batocera v.38, v.39, v.40, v.41 e v.42
+
 ## 🚀 Instruções de Instalação
 
 Para iniciar a instalação, copie o comando abaixo, cole em seu terminal, e dê Enter para iniciar a instalação:
