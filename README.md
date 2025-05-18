@@ -84,3 +84,9 @@ Todas as **teclas de atalhos comuns** a seguir:
 ---
 
 Aproveite o emulador e divirta-se com seus jogos Java ME favoritos no Batocera! 😃
+
+## Agradecimentos
+
+Obrigado ao desenvolvedor **hex007**, pelo desenvolvimento e disponibilização do **Freej2me**. O desenvolvimento deste projeto não seria nada sem a existência do **Freej2me**.
+Você pode acessar a pagina oficial clicando neste link:
+https://github.com/hex007/freej2me
