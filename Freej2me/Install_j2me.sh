@@ -160,6 +160,7 @@ rm -rf $TEMP_DIR
 # Save changes
 echo "Saving changes..."
 batocera-save-overlay
+clear
 
 type_text "Installation completed successfully."
 type_text "Developed by DRLEdition19"
