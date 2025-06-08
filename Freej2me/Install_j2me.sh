@@ -162,5 +162,8 @@ echo "Saving changes..."
 batocera-save-overlay
 
 type_text "Installation completed successfully."
-type_text "Developed by DRLEdition19"  
+type_text "Developed by DRLEdition19"
+desktop
+killall -9 pcmanfm
 killall -9 emulationstation
+exit 0
